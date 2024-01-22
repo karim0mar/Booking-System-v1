@@ -2,6 +2,7 @@ import json
 import os
 import time
 
+from main import init
 from Classes.ClientData import ClientData, readData
 from Classes.ReservationsData import ReservationsData
 
@@ -27,7 +28,8 @@ class ClientInterface:
         print(f"\x1B[2;36m Welcome {LoginData.getName()}\n your Cart Items are: {bookingData.BookedTicketsNumber}\n")
         print("\x1B[2;32m 1) Add films to cart\n"
               "\x1B[2;32m 2) Confirm & cancel a product\n"
-              "\x1B[2;32m 3) Pay \n")
+              "\x1B[2;32m 3) Pay \n"
+              "\x1B[2;32m 4) Exit \n")
         print("\x1B[3;31m Note! your max number of booking tickets is 5")
         operation = int(input("\n"))
         os.system("cls")
@@ -42,6 +44,8 @@ class ClientInterface:
                 controlPage()
             case 0:
                 payPage()
+            case 4:
+                exit(1)
             case _:
                 print("Please Enter A Valid Option")
                 self.reload()

@@ -5,9 +5,6 @@ from Classes.LoginClass import LoginClass
 from Interface.ClientInterface import ClientInterface
 
 
-
-
-
 def CLEAR():
     os.system("cls")
 
