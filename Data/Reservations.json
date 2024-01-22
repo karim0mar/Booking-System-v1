@@ -1,0 +1,24 @@
+{
+    "reservations": [
+        {
+            "CustomerName": "ka",
+            "email": "kk",
+            "BookedTickets": [
+                "a",
+                "film1",
+                "film2"
+            ],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        },
+        {
+            "CustomerName": "karim",
+            "email": "k1",
+            "BookedTickets": [
+                "a"
+            ],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+   "films": [
+        {
+
+          "filmName": "film1",
+          "filmID" : 101,
+          "filmPrice": 40.0,
+          "filmDate": ""
+        },
+     {
+       "filmName": "film2",
+       "filmID" : 102,
+       "filmPrice": 20.0,
+       "filmDate": ""
+     }
+
+        ]
+}
