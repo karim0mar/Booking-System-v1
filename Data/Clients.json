@@ -23,6 +23,27 @@
             "accountType": "usr",
             "name": "Karim Omar",
             "phoneNumber": 109484
+        },
+        {
+            "email": "karim.omar2025gmail.com",
+            "password": "123",
+            "name": "karim omar",
+            "phoneNumber": "123",
+            "accountType": "usr"
+        },
+        {
+            "email": "aa",
+            "password": "aa",
+            "name": "aa aa",
+            "phoneNumber": "aa",
+            "accountType": "usr"
+        },
+        {
+            "email": "bb",
+            "password": "bb",
+            "name": "bb bb",
+            "phoneNumber": "bb",
+            "accountType": "usr"
         }
     ]
 }

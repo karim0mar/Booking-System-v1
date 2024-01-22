@@ -14,8 +14,23 @@
         {
             "CustomerName": "karim",
             "email": "k1",
+            "BookedTickets": [],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        },
+        {
+            "CustomerName": "aa aa",
+            "email": "aa",
+            "BookedTickets": [],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        },
+        {
+            "CustomerName": "bb bb",
+            "email": "bb",
             "BookedTickets": [
-                "a"
+                "film1",
+                "film2"
             ],
             "TotalPayment": 0.0,
             "BookingDate": null

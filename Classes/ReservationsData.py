@@ -1,13 +1,12 @@
 import json
 
+from Classes.ClientData import readData
 
-class ReservationsData():
+
+class ReservationsData:
     def __init__(self, _email):
         ClientHasBooking = False
-        file_path = "Data/Reservations.json"
-        file = open(file_path)
-        data = json.load(file)
-
+        data = readData("Reservations")
         for i in data["reservations"]:
             u = i["email"]
             if u == _email:
@@ -18,7 +17,6 @@ class ReservationsData():
                 self.BookedTicketsNumber = len(i["BookedTickets"])
                 ClientHasBooking = True
                 break
-            file.close()
 
     def getCustomerName(self):
         return self.CustomerName

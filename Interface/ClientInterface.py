@@ -2,7 +2,7 @@ import json
 import os
 import time
 
-from Classes.ClientData import ClientData
+from Classes.ClientData import ClientData, readData
 from Classes.ReservationsData import ReservationsData
 
 
@@ -14,7 +14,7 @@ def payPage():
     pass
 
 
-class ClientInterface():
+class ClientInterface:
 
     def __init__(self, _email, _password):
         self.email = _email
@@ -48,10 +48,7 @@ class ClientInterface():
 
     def filmsPage(self):
         print("\x1B[3;31m Enter 0 to back")
-
-        file_path = "Data/Films.json"
-        file = open(file_path)
-        data = json.load(file)
+        data = readData("Films")
         bookingData = ReservationsData(self.email)
         filmID = 0
         BookedList = []
@@ -97,6 +94,8 @@ class ClientInterface():
         writeFile = open("Data/Reservations.json", "w")
         released = json.dumps(data, indent=4, separators=(',', ': '))
         writeFile.write(released)
+        writeFile.close()
+        self.filmsPage()
 
     def reload(self):
         time.sleep(0.6)

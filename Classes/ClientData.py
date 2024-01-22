@@ -1,12 +1,26 @@
 import json
 
 
-class ClientData():
+def readData(fileName):
+    file_path = f"Data/{fileName}.json"
+    file = open(file_path)
+    data = json.load(file)
+    file.close()
+    return data
+
+
+def checkEmailExisted(_email):
+    data = readData("Clients")
+    for i in data["clients"]:
+        if i["email"] == _email:
+            return True
+    return False
+
+
+class ClientData:
     def __init__(self, _email, _password):
         self.LoginStatues = False
-        file_path = "Data/Clients.json"
-        file = open(file_path)
-        data = json.load(file)
+        data = readData("Clients")
 
         for i in data["clients"]:
             u = i["email"]
@@ -18,7 +32,6 @@ class ClientData():
                 self.phoneNumber = i["phoneNumber"]
                 self.LoginStatues = True
                 break
-        file.close()
 
     def getName(self):
         return self.name
@@ -31,3 +44,4 @@ class ClientData():
 
     def getPassword(self):
         return self.password
+

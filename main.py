@@ -3,20 +3,9 @@ import os
 import time
 from Classes.LoginClass import LoginClass
 from Interface.ClientInterface import ClientInterface
-from Interface.RegisterInterface import RegisterInterface
 
 
-def register():
-    file_path = "Data/Clients.json"
-    file = open(file_path)
-    data = json.load(file)
-    data2 = {
-        "email": "<EMAIL>",
-    }
-    data["clients"].append(data2)
-    print(data["clients"])
-    file2 = open(file_path, "w")
-    json.dump(data, file2, indent=4, separators=(',', ': '))
+
 
 
 def CLEAR():
@@ -40,6 +29,7 @@ def LoginPage():
 
 
 def RegisterPage():
+    from Interface.RegisterInterface import RegisterInterface
     RegisterInterface()
 
 
