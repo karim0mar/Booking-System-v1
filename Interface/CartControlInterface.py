@@ -27,6 +27,8 @@ class CartControlInterface:
             filmControl = FilmsControl(filmsList)
             filmControl.printFilmsData()
             print("\x1B[3;31m Enter 0 to back")
+            option = input("\x1B[3;33m"
+                           " yes to confirm \n rem (film Name) to remove a film \n->")
 
         else:
             print("\x1B[3;31m Your cart is empty")

@@ -26,7 +26,7 @@ class ClientInterface:
               "\x1B[2;32m 3) Pay \n"
               "\x1B[2;32m 4) Exit \n")
         print("\x1B[3;31m Note! your max number of booking tickets is 5")
-        operation = int(input("\n"))
+        operation = int(input("\n->"))
         os.system("cls")
         match operation:
             case 0:
@@ -65,7 +65,7 @@ class ClientInterface:
                 f"Film Name : {film['filmName']} \x1B[3;31m{Booked}\n"
                 f"\033[2;96mFilm Price : {film['filmPrice']}$\n"
                 f"Film Date: {film['filmDate']}\n")
-        operation = int(input("Book film number : "))
+        operation = int(input("Book film number : \n->"))
         os.system("cls")
         match operation:
             case 0:
