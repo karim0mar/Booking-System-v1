@@ -2,18 +2,18 @@ from Classes.ClientData import readData
 
 
 def getFilmData():
-    return readData("Films")
+    return readData("Films")["films"]
 
 
 def getFilmPrice(filmName):
-    for film in getFilmData()["films"]:
+    for film in getFilmData():
         if filmName == film["filmName"]:
             return film["filmPrice"]
     return 0
 
 
 def getFilmDate(filmName):
-    for film in getFilmData()["films"]:
+    for film in getFilmData():
         if filmName == film["filmName"]:
             return film["filmDate"]
     return 0
@@ -30,7 +30,3 @@ class FilmsControl:
             print(f"Film Price : {getFilmPrice(film)}$")
             print(f"Film Date : {getFilmDate(film)}")
             print('\n')
-    # self.getFilmDate()
-
-    # def getFilmDate(self):
-    #   return self.filmDate

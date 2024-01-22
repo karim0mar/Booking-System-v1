@@ -1,3 +1,6 @@
+import os
+import time
+
 from Classes.FilmsControl import FilmsControl
 from Classes.ReservationsData import ReservationsData
 
@@ -11,7 +14,6 @@ class CartControlInterface:
 
     def controlUI(self):
         print("\x1B[3;33m          Welcome to the control page ..         \n")
-        print("\x1B[3;31m Enter 0 to back")
         film_counter = 0
         filmsList = []
         bookingData = ReservationsData(self.email)
@@ -21,6 +23,14 @@ class CartControlInterface:
                     film_counter += 1
                     filmsList.append(film)
                 break
-        filmControl = FilmsControl(filmsList)
-        filmControl.printFilmsData()
+        if len(filmsList) > 0:
+            filmControl = FilmsControl(filmsList)
+            filmControl.printFilmsData()
+            print("\x1B[3;31m Enter 0 to back")
 
+        else:
+            print("\x1B[3;31m Your cart is empty")
+            time.sleep(1.2)
+            os.system("cls")
+            from Interface.ClientInterface import ClientInterface
+            ClientInterface(self.email, self.password)
