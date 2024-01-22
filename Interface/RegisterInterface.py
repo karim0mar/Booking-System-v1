@@ -22,7 +22,7 @@ class RegisterInterface:
         if not checkEmailExisted(email):
             if registerEmail(email, password, fullName, phoneNumber):
                 print("Email registered successfully..")
-                time.sleep(0.5)
+                time.sleep(1)
                 os.system("cls")
                 ClientInterface(email, password)
         else:

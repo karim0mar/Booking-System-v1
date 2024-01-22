@@ -1,36 +1,14 @@
 {
     "reservations": [
         {
-            "CustomerName": "ka",
+            "CustomerName": "kk kk",
             "email": "kk",
             "BookedTickets": [
-                "a",
-                "film1",
-                "film2"
-            ],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "karim",
-            "email": "k1",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "aa aa",
-            "email": "aa",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "bb bb",
-            "email": "bb",
-            "BookedTickets": [
-                "film1",
-                "film2"
+                "film 5",
+                "film 4",
+                "film 1",
+                "film 6",
+                "film 2"
             ],
             "TotalPayment": 0.0,
             "BookingDate": null

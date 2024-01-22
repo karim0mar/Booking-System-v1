@@ -3,46 +3,14 @@
         "name": "Booking System (Client Version)",
         "version": "1.0.0",
         "description": "Clients Data..",
-        "main": "index.js",
-        "scripts": {
-            "test": "echo \"Error: no test specified\" && exit 1"
-        },
         "private": true
     },
     "clients": [
         {
-            "email": "ka",
-            "password": "2",
-            "name": "Karim Omar",
-            "phoneNumber": 0,
-            "accountType": "usr"
-        },
-        {
             "email": "kk",
-            "password": "1",
-            "accountType": "usr",
-            "name": "Karim Omar",
-            "phoneNumber": 109484
-        },
-        {
-            "email": "karim.omar2025gmail.com",
-            "password": "123",
-            "name": "karim omar",
-            "phoneNumber": "123",
-            "accountType": "usr"
-        },
-        {
-            "email": "aa",
-            "password": "aa",
-            "name": "aa aa",
-            "phoneNumber": "aa",
-            "accountType": "usr"
-        },
-        {
-            "email": "bb",
-            "password": "bb",
-            "name": "bb bb",
-            "phoneNumber": "bb",
+            "password": "kk",
+            "name": "kk kk",
+            "phoneNumber": "kk",
             "accountType": "usr"
         }
     ]

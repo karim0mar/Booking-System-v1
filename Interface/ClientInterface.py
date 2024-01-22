@@ -1,14 +1,9 @@
 import json
 import os
 import time
-
-from main import init
 from Classes.ClientData import ClientData, readData
 from Classes.ReservationsData import ReservationsData
-
-
-def controlPage():
-    pass
+from Interface.CartControlInterface import CartControlInterface
 
 
 def payPage():
@@ -34,6 +29,8 @@ class ClientInterface:
         operation = int(input("\n"))
         os.system("cls")
         match operation:
+            case 0:
+                payPage()
             case 1:
                 if bookingData.getBookedTicketsNumber() < 5:
                     self.filmsPage()
@@ -41,9 +38,9 @@ class ClientInterface:
                     print("You reached the maximum number of booking tickets")
                     self.reload()
             case 2:
-                controlPage()
-            case 0:
-                payPage()
+                self.controlPage()
+            case 3:
+                pass
             case 4:
                 exit(1)
             case _:
@@ -101,6 +98,8 @@ class ClientInterface:
         writeFile.close()
         self.filmsPage()
 
+    def controlPage(self):
+        CartControlInterface(self.email, self.password)
     def reload(self):
         time.sleep(0.6)
         os.system("cls")

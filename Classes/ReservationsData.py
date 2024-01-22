@@ -6,8 +6,8 @@ from Classes.ClientData import readData
 class ReservationsData:
     def __init__(self, _email):
         ClientHasBooking = False
-        data = readData("Reservations")
-        for i in data["reservations"]:
+        self.data = readData("Reservations")
+        for i in self.data["reservations"]:
             u = i["email"]
             if u == _email:
                 self.CustomerName = i["CustomerName"]
@@ -17,6 +17,9 @@ class ReservationsData:
                 self.BookedTicketsNumber = len(i["BookedTickets"])
                 ClientHasBooking = True
                 break
+
+    def getFileData(self):
+        return self.data
 
     def getCustomerName(self):
         return self.CustomerName
