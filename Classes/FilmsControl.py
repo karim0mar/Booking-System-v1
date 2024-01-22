@@ -29,7 +29,7 @@ class FilmsControl:
             print(f"\033[95mFilm Name : {film}")
             print(f"Film Price : {getFilmPrice(film)}$")
             print(f"Film Date : {getFilmDate(film)}")
-            print()
+            print('\n')
     # self.getFilmDate()
 
     # def getFilmDate(self):
