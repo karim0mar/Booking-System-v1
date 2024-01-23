@@ -88,10 +88,16 @@ class FilmsControl:
                 return False
             case _:
                 if operation <= filmID and operation not in BookedList:
-                    self.bookFilmWithID(getFilmData()[operation - 1], self.email)
+                    if len(BookedList) <= 5:
+                        self.bookFilmWithID(getFilmData()[operation - 1], self.email)
+                    else:
+                        print("You reached the maximum number of booking tickets")
+                        time.sleep(3)
+                        os.system("cls")
+                        self.showFilmsList()
                 else:
                     print("Please Enter A Valid Option")
-                    time.sleep(0.3)
+                    time.sleep(3)
                     os.system("cls")
                     self.showFilmsList()
 

@@ -26,13 +26,14 @@ class CartControlInterface:
         if len(filmsList) > 0:
             printFilmsData(filmsList)
             payOperation = PayClass(self.email, self.password, filmsList)
-            print(f"\033[0m\x1b[3;38:5:10m your total price:{str(payOperation.getTotalPayment()) + ' ' + CURRENCY}")
+            print(f"\033[0m\x1b[3;38:5:10m Your total price:{str(payOperation.getTotalPayment()) + ' ' + CURRENCY}")
             print("\x1b[48;2;255;0;0m Enter 0 to back")
             operation = input("\033[0m\x1B[3;33m"
                               " yes to confirm \n rem (Film Name) to remove a film \n->")
             match operation:
                 case "yes":
                     PayInterfaceInit(self.email, self.password, filmsList)
+                    return True
                 case "0":
                     return False
                 case _:

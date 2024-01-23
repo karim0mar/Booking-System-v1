@@ -1,3 +1,17 @@
 {
-    "reservations": []
+    "reservations": [
+        {
+            "CustomerName": "kk kk",
+            "email": "k@k.com",
+            "BookedTickets": [
+                "Mar3y El Breemo",
+                "Bogeyman",
+                "200 Pounds",
+                "Not Me (I)",
+                "Mr. Ex"
+            ],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        }
+    ]
 }
