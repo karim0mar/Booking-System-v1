@@ -15,6 +15,7 @@ class RegisterInterface:
         phoneNumber = input("Enter your phone number: \n->")
         email = input("Enter your email address: \n->")
         password = input("Enter your password: \n->")
+
         fullName = firsName + " " + lastName
         if not checkEmailExisted(email):
             if registerEmail(email, password, fullName, phoneNumber):

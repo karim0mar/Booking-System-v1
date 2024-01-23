@@ -1,6 +1,6 @@
 import json
 
-from Classes.ClientData import ClientData, readData
+from Classes.AssistClass import readData
 
 
 def registerEmail(email, password, fullName, phoneNumber):

@@ -1,6 +1,6 @@
 import json
 
-from Classes.ClientData import readData
+from Classes.AssistClass import readData
 
 
 class ReservationsData:

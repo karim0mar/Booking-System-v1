@@ -12,6 +12,13 @@
             "name": "kk kk",
             "phoneNumber": "kk",
             "accountType": "usr"
+        },
+        {
+            "email": "karim.omar2025@gmail.com",
+            "password": "1234",
+            "name": "karim omar",
+            "phoneNumber": "01003975201",
+            "accountType": "usr"
         }
     ]
 }

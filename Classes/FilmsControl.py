@@ -108,6 +108,7 @@ class FilmsControl:
     def removeFilmWithName(self, filmData, email):
         bData = bookingData(email)
         bData.BookedTickets.remove(filmData)
+
         data = filmDataAfterChange(bData.getBookedTickets(), email)
         writeFile = open("Data/Reservations.json", "w")
         released = json.dumps(data, indent=4, separators=(',', ': '))
