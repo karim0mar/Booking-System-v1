@@ -2,16 +2,17 @@ import os
 import time
 
 import main
+from Classes.AssistClass import getEmail, getPassword
 from Classes.LoginClass import LoginClass
 from Interface.ClientInterface import ClientInterface
 
 
 class LoginInterface:
     def __init__(self):
-        self.email = input("Enter your email address:\n->")
-        self.password = input("Enter your password:\n->")
+        self.email = getEmail()
+        self.password = getPassword()
         LoginProcess = LoginClass(self.email, self.password)
-        if LoginProcess.login():
+        if LoginProcess.ClientLogin():
             print("Login successful")
             time.sleep(0.6)
             os.system("cls")

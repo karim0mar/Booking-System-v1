@@ -5,7 +5,7 @@ from Classes.AssistClass import readData
 
 class ReservationsData:
     def __init__(self, _email):
-        ClientHasBooking = False
+        self.ClientHasBooking = False
         self.data = readData("Reservations")
         for i in self.data["reservations"]:
             u = i["email"]
@@ -15,7 +15,7 @@ class ReservationsData:
                 self.TotalPayment = i["TotalPayment"]
                 self.BookingDate = i["BookingDate"]
                 self.BookedTicketsNumber = len(i["BookedTickets"])
-                ClientHasBooking = True
+                self.ClientHasBooking = True
                 break
 
     def getFileData(self):
@@ -35,3 +35,6 @@ class ReservationsData:
 
     def getBookingDate(self):
         return self.BookingDate
+
+    def getClientHasBooking(self):
+        return self.ClientHasBooking

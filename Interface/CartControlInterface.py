@@ -1,12 +1,9 @@
 import os
 import time
-
-from Classes.FilmsControl import printFilmsData, FilmsControl
+from Classes.FilmsControl import printFilmsData, FilmsControl, CURRENCY
+from Classes.PayClass import PayClass
 from Classes.ReservationsData import ReservationsData
-
-
-def confirmPayment(email, password):
-    pass
+from Interface.PayInterface import PayInterfaceInit
 
 
 class CartControlInterface:
@@ -28,12 +25,14 @@ class CartControlInterface:
                 break
         if len(filmsList) > 0:
             printFilmsData(filmsList)
-            print("\x1B[3;31m Enter 0 to back")
-            operation = input("\x1B[3;33m"
+            payOperation = PayClass(self.email, self.password, filmsList)
+            print(f"\033[0m\x1b[3;38:5:10m your total price:{str(payOperation.getTotalPayment()) + ' ' + CURRENCY}")
+            print("\x1b[48;2;255;0;0m Enter 0 to back")
+            operation = input("\033[0m\x1B[3;33m"
                               " yes to confirm \n rem (Film Name) to remove a film \n->")
             match operation:
-                case "yes", "YES":
-                    confirmPayment(email=self.email, password=self)
+                case "yes":
+                    PayInterfaceInit(self.email, self.password, filmsList)
                 case "0":
                     return False
                 case _:

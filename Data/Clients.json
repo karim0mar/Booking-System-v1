@@ -5,13 +5,5 @@
         "description": "Clients Data..",
         "private": true
     },
-    "clients": [
-        {
-            "email": "karim",
-            "password": "karim",
-            "name": "k___",
-            "phoneNumber": "k___",
-            "accountType": "usr"
-        }
-    ]
+    "clients": []
 }

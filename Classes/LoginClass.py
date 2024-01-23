@@ -1,3 +1,4 @@
+from Classes.AdminData import AdminData
 from Classes.ClientData import ClientData
 
 
@@ -8,6 +9,10 @@ class LoginClass:
         self.email = _email
         self.password = _password
 
-    def login(self):
+    def ClientLogin(self):
         LoginData = ClientData(self.email, self.password)
+        return LoginData.LoginStatues
+
+    def AdminLogin(self):
+        LoginData = AdminData(self.email, self.password)
         return LoginData.LoginStatues

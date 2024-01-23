@@ -2,7 +2,7 @@ import os
 import time
 
 from Classes.AssistClass import writeData
-from Classes.ClientData import readData
+from Classes.AssistClass import readData
 from Classes.ReservationsData import ReservationsData
 
 CURRENCY = "EGP"
@@ -37,8 +37,7 @@ def printFilmsData(filmsList):
     for film in filmsList:
         print(f"\033[1;95mFilm Name : {film}")
         print(f"Film Price : {getFilmPrice(film)}\x1B[2;32m {CURRENCY}")
-        print(f"\033[1;95mFilm Date : {getFilmDate(film)}")
-        print('\n')
+        print(f"\033[1;95mFilm Date : {getFilmDate(film)}\n")
 
 
 def bookingData(email):
@@ -64,7 +63,6 @@ class FilmsControl:
         self.password = _password
 
     def showFilmsList(self):
-        print("\x1B[3;31m Enter 0 to back")
         filmID = 0
         BookedList = []
         for film in getFilmData():
@@ -81,7 +79,9 @@ class FilmsControl:
                 f"\033[2;96mFilm Description : {getFilmDescription(filmName)}\n"
                 f"Film Price : {getFilmPrice(filmName)}$\n"
                 f"Film Date: {getFilmDate(filmName)}\n")
-        operation = int(input("Book film number : \n->"))
+
+        print("\x1B[3;31m Enter 0 to back")
+        operation = int(input("\033[2;96mBook film number : \n->"))
         os.system("cls")
         match operation:
             case 0:
@@ -92,7 +92,8 @@ class FilmsControl:
                 else:
                     print("Please Enter A Valid Option")
                     time.sleep(0.3)
-                    return False
+                    os.system("cls")
+                    self.showFilmsList()
 
     def bookFilmWithID(self, filmData, email):
         bData = bookingData(email)
@@ -112,5 +113,5 @@ class FilmsControl:
             os.system("cls")
             CartControlInterface(self.email, self.password).controlUI()
         except ValueError:
-            print("Film name not correct")
+            print("Film name is not correct")
             time.sleep(0.4)

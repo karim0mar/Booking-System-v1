@@ -1,6 +1,17 @@
 {
-  "name": "Admin Data",
-  "version": "1.0.0",
-  "description": "",
-  "private": true
+    "appInfo": {
+        "name": "Booking System (Admin Version)",
+        "version": "1.0.0",
+        "description": "Admins Data..",
+        "private": true
+    },
+    "admins": [
+        {
+            "email": "k@k.com",
+            "password": "123456",
+            "name": "karim omar",
+            "phoneNumber": "01111111111",
+            "accountType": "usr"
+        }
+    ]
 }

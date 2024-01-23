@@ -1,4 +1,5 @@
 import os
+import sys
 
 
 def CLEAR():
@@ -16,7 +17,8 @@ def RegisterPage():
 
 
 def AdminPage():
-    pass
+    from Interface.AdminLoginInterface import AdminLoginUI
+    AdminLoginUI()
 
 
 def init():
@@ -25,7 +27,8 @@ def init():
 
     operation = int(input("\x1B[2;32m"
                           "1) Login to booking system\n"
-                          "2) Create an account\n\n"
+                          "2) Create an account\n"
+                          "3) Exit\n\n"
                           "0) Admin Login\n->"))
     CLEAR()
     match operation:
@@ -33,6 +36,8 @@ def init():
             LoginPage()
         case 2:
             RegisterPage()
+        case 3:
+            exit(1)
         case 0:
             AdminPage()
         case _:
@@ -40,5 +45,15 @@ def init():
             exit(1)
 
 
+def checkCMD():
+    print(int(sys.argv[1]))
+    try:
+        if int(sys.argv[1]) == 99:
+            return True
+    except IndexError:
+        return False
+
+
 if __name__ == '__main__':
+    #if checkCMD():
     init()
