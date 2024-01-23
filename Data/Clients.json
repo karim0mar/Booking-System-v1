@@ -1,24 +1,9 @@
 {
-    "appInfo": {
-        "name": "Booking System (Client Version)",
-        "version": "1.0.0",
-        "description": "Clients Data..",
-        "private": true
-    },
-    "clients": [
-        {
-            "email": "kk",
-            "password": "kk",
-            "name": "kk kk",
-            "phoneNumber": "kk",
-            "accountType": "usr"
-        },
-        {
-            "email": "karim.omar2025@gmail.com",
-            "password": "1234",
-            "name": "karim omar",
-            "phoneNumber": "01003975201",
-            "accountType": "usr"
-        }
-    ]
+  "appInfo": {
+    "name": "Booking System (Client Version)",
+    "version": "1.0.0",
+    "description": "Clients Data..",
+    "private": true
+  },
+  "clients": []
 }
