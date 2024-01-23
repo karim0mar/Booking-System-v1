@@ -1,6 +1,4 @@
-import json
-
-from Classes.AssistClass import readData
+from Classes.AssistClass import readData, writeData
 
 
 def registerEmail(email, password, fullName, phoneNumber):
@@ -24,12 +22,8 @@ def registerEmail(email, password, fullName, phoneNumber):
     }
     clientData["clients"].append(client)
     reservationData["reservations"].append(reservation)
-    writeClient = open(f"Data/{clientFileName}.json", "w")
-    json.dump(clientData, writeClient, indent=4, separators=(',', ': '))
-    writeClient.close()
-    writeReservation = open(f"Data/{reservationFileName}.json", "w")
-    json.dump(reservationData, writeReservation, indent=4, separators=(',', ': '))
-    writeReservation.close()
+    writeData(clientFileName, clientData)
+    writeData(reservationFileName, reservationData)
     return True
 
 

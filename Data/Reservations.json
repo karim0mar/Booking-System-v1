@@ -1,3 +1,14 @@
 {
-    "reservations": []
+    "reservations": [
+        {
+            "CustomerName": "k___",
+            "email": "karim",
+            "BookedTickets": [
+                "Mar3y El Breemo",
+                "Bogeyman"
+            ],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        }
+    ]
 }

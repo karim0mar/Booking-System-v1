@@ -1,7 +1,7 @@
-import json
 import os
 import time
 
+from Classes.AssistClass import writeData
 from Classes.ClientData import readData
 from Classes.ReservationsData import ReservationsData
 
@@ -97,22 +97,20 @@ class FilmsControl:
     def bookFilmWithID(self, filmData, email):
         bData = bookingData(email)
         bData.BookedTickets.append(filmData["filmName"])
-        #Payment = bData.TotalPayment
-        data = filmDataAfterChange(bData.getBookedTickets(), email)
-        writeFile = open("Data/Reservations.json", "w")
-        released = json.dumps(data, indent=4, separators=(',', ': '))
-        writeFile.write(released)
-        writeFile.close()
+        FilmData = filmDataAfterChange(bData.getBookedTickets(), email)
+        writeData("Reservations", FilmData)
+        os.system("cls")
         self.showFilmsList()
 
     def removeFilmWithName(self, filmData, email):
-        bData = bookingData(email)
-        bData.BookedTickets.remove(filmData)
-
-        data = filmDataAfterChange(bData.getBookedTickets(), email)
-        writeFile = open("Data/Reservations.json", "w")
-        released = json.dumps(data, indent=4, separators=(',', ': '))
-        writeFile.write(released)
-        writeFile.close()
-        from Interface.CartControlInterface import CartControlInterface
-        CartControlInterface(self.email, self.password).controlUI()
+        try:
+            bData = bookingData(email)
+            bData.BookedTickets.remove(filmData)
+            FilmData = filmDataAfterChange(bData.getBookedTickets(), email)
+            writeData("Reservations", FilmData)
+            from Interface.CartControlInterface import CartControlInterface
+            os.system("cls")
+            CartControlInterface(self.email, self.password).controlUI()
+        except:
+            print("Film name not correct")
+            time.sleep(0.4)

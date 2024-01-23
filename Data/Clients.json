@@ -1,9 +1,17 @@
 {
-  "appInfo": {
-    "name": "Booking System (Client Version)",
-    "version": "1.0.0",
-    "description": "Clients Data..",
-    "private": true
-  },
-  "clients": []
+    "appInfo": {
+        "name": "Booking System (Client Version)",
+        "version": "1.0.0",
+        "description": "Clients Data..",
+        "private": true
+    },
+    "clients": [
+        {
+            "email": "karim",
+            "password": "karim",
+            "name": "k___",
+            "phoneNumber": "k___",
+            "accountType": "usr"
+        }
+    ]
 }
