@@ -1,7 +1,7 @@
-import json
 import os
 import time
-from Classes.ClientData import ClientData, readData
+from Classes.ClientData import ClientData
+from Classes.FilmsControl import FilmsControl
 from Classes.ReservationsData import ReservationsData
 from Interface.CartControlInterface import CartControlInterface
 
@@ -48,58 +48,13 @@ class ClientInterface:
                 self.reload()
 
     def filmsPage(self):
-        print("\x1B[3;31m Enter 0 to back")
-        data = readData("Films")
-        bookingData = ReservationsData(self.email)
-        filmID = 0
-        BookedList = []
-        for film in data["films"]:
-            filmID = filmID + 1
-            if film['filmName'] in bookingData.BookedTickets:
-                Booked = "Booked"
-                BookedList.append(filmID)
-            else:
-                Booked = ""
-            print(
-                f"\033[2;96mFilm number : {filmID}\n"
-                f"Film Name : {film['filmName']} \x1B[3;31m{Booked}\n"
-                f"\033[2;96mFilm Price : {film['filmPrice']}$\n"
-                f"Film Date: {film['filmDate']}\n")
-        operation = int(input("Book film number : \n->"))
-        os.system("cls")
-        match operation:
-            case 0:
-                self.reload()
-            case _:
-                if operation <= filmID and operation not in BookedList:
-                    self.bookFilmWithID(data["films"][operation - 1], self.email)
-                else:
-                    print("Please Enter A Valid Option")
-                    time.sleep(0.3)
-                    self.reload()
-
-    def bookFilmWithID(self, filmData, email):
-        bookingData = ReservationsData(self.email)
-        bookingData.BookedTickets.append(filmData["filmName"])
-        Payment = bookingData.TotalPayment
-        jsonFile = open("Data/Reservations.json", "r+")
-        data = json.load(jsonFile)
-        index = 0
-        for i in data["reservations"]:
-            if i["email"] == email:
-                i["BookedTickets"] = bookingData.BookedTickets
-                del data["reservations"][index]
-                data["reservations"].insert(index, i)
-                break
-            index = index + 1
-        writeFile = open("Data/Reservations.json", "w")
-        released = json.dumps(data, indent=4, separators=(',', ': '))
-        writeFile.write(released)
-        writeFile.close()
-        self.filmsPage()
+        if not FilmsControl(self.email,self.password).showFilmsList():
+            self.reload()
 
     def controlPage(self):
-        CartControlInterface(self.email, self.password)
+        if not CartControlInterface(self.email,self.password).controlUI():
+            self.reload()
+
     def reload(self):
         time.sleep(0.6)
         os.system("cls")

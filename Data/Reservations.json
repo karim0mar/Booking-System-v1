@@ -4,8 +4,20 @@
             "CustomerName": "kk kk",
             "email": "kk",
             "BookedTickets": [
-                "film 6",
-                "film 2"
+                "Mr. Ex",
+                "200 Pounds",
+                "Not Me (I)",
+                "Tag (I)"
+            ],
+            "TotalPayment": 0.0,
+            "BookingDate": null
+        },
+        {
+            "CustomerName": "hh hh",
+            "email": "hh",
+            "BookedTickets": [
+                "Tag (I)",
+                "Mr. Ex"
             ],
             "TotalPayment": 0.0,
             "BookingDate": null

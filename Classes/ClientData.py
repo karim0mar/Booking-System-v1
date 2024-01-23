@@ -44,4 +44,3 @@ class ClientData:
 
     def getPassword(self):
         return self.password
-
