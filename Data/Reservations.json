@@ -4,8 +4,7 @@
             "CustomerName": "k___",
             "email": "karim",
             "BookedTickets": [
-                "Mar3y El Breemo",
-                "Bogeyman"
+                "Mar3y El Breemo"
             ],
             "TotalPayment": 0.0,
             "BookingDate": null

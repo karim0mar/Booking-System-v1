@@ -111,6 +111,6 @@ class FilmsControl:
             from Interface.CartControlInterface import CartControlInterface
             os.system("cls")
             CartControlInterface(self.email, self.password).controlUI()
-        except:
+        except ValueError:
             print("Film name not correct")
             time.sleep(0.4)
