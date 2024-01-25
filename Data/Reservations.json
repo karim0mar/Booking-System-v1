@@ -1,38 +1,3 @@
 {
-    "reservations": [
-        {
-            "CustomerName": "kk ll",
-            "email": "ks@k.com",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "kk lka",
-            "email": "l@l.com",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "aks;d fnj",
-            "email": "k@k.com",
-            "BookedTickets": [
-                "Mar3y El Breemo",
-                "Bogeyman",
-                "200 Pounds",
-                "Not Me (I)",
-                "Mr. Ex"
-            ],
-            "TotalPayment": 210.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "karim omar",
-            "email": "karim@k.com",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        }
-    ]
+    "reservations": []
 }
