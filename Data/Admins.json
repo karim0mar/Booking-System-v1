@@ -7,11 +7,10 @@
     },
     "admins": [
         {
-            "email": "k@k.com",
+            "email": "admin@admin.com",
             "password": "123456",
-            "name": "karim omar",
+            "name": "ADMIN~",
             "phoneNumber": "01111111111",
-            "accountType": "usr"
         }
     ]
 }
