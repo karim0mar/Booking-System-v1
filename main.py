@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 
 
 def CLEAR():
@@ -13,7 +14,11 @@ def LoginPage():
 
 def RegisterPage():
     from Interface.RegisterInterface import RegisterInterface
-    RegisterInterface()
+    registerData = RegisterInterface()
+    registerData.register()
+    if registerData.registerStatues:
+        from Interface.ClientInterface import ClientInterface
+        ClientInterface(registerData.email, registerData.password)
 
 
 def AdminPage():
@@ -42,7 +47,8 @@ def init():
             AdminPage()
         case _:
             print("Please Enter A Valid Option")
-            exit(1)
+            time.sleep(1.5)
+            init()
 
 
 def checkCMD():

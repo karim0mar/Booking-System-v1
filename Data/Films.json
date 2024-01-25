@@ -1,40 +1,40 @@
 {
-  "films": [
-    {
-      "filmName": "Mar3y El Breemo",
-      "filmDescription": "(2023) 106 min | Comedy",
-      "filmPrice": 40.0,
-      "filmDate": "2023-4-12 5:00"
-    },
-    {
-      "filmName": "Bogeyman",
-      "filmDescription": "(2023) 95 min | Action, Comedy",
-      "filmPrice": 20.0,
-      "filmDate": "2023-4-12 8:00"
-    },
-    {
-      "filmName": "200 Pounds",
-      "filmDescription" : "(2021) Drama",
-      "filmPrice": 60.0,
-      "filmDate": "2023-4-12 3:00"
-    },
-    {
-      "filmName": "Not Me (I)",
-      "filmPrice": 70.0,
-      "filmDescription": "(2021) 105 min | Comedy, Drama, Fantasy",
-      "filmDate": "2023-4-12 2:00"
-    },
-    {
-      "filmName": "Mr. Ex",
-      "filmDescription": "(2023) 104 min | Action, Comedy",
-      "filmPrice": 20.0,
-      "filmDate": "2023-4-12 4:00"
-    },
-    {
-      "filmName": "Tag (I)",
-      "filmDescription": "(2023) 112 min | Comedy, Drama",
-      "filmPrice": 90.0,
-      "filmDate": "2023-4-12 12:00"
-    }
-  ]
+    "films": [
+        {
+            "filmName": "Mar3y El Breemo",
+            "filmDescription": "(2023) 106 min | Comedy",
+            "filmPrice": 40.0,
+            "filmDate": "2023-4-12 5:00"
+        },
+        {
+            "filmName": "Bogeyman",
+            "filmDescription": "(2023) 95 min | Action, Comedy",
+            "filmPrice": 20.0,
+            "filmDate": "2023-4-12 8:00"
+        },
+        {
+            "filmName": "200 Pounds",
+            "filmDescription": "(2021) Drama",
+            "filmPrice": 60.0,
+            "filmDate": "2023-4-12 3:00"
+        },
+        {
+            "filmName": "Not Me (I)",
+            "filmPrice": 70.0,
+            "filmDescription": "(2021) 105 min | Comedy, Drama, Fantasy",
+            "filmDate": "2023-4-12 2:00"
+        },
+        {
+            "filmName": "Mr. Ex",
+            "filmDescription": "(2023) 104 min | Action, Comedy",
+            "filmPrice": 20.0,
+            "filmDate": "2023-4-12 4:00"
+        },
+        {
+            "filmName": "Tag (I)",
+            "filmDescription": "(2023) 112 min | Comedy, Drama",
+            "filmPrice": 99.0,
+            "filmDate": "2023-4-12 12:00"
+        }
+    ]
 }

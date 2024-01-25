@@ -29,7 +29,9 @@ class CartControlInterface:
             print(f"\033[0m\x1b[3;38:5:10m Your total price:{str(payOperation.getTotalPayment()) + ' ' + CURRENCY}")
             print("\x1b[48;2;255;0;0m Enter 0 to back")
             operation = input("\033[0m\x1B[3;33m"
-                              " yes to confirm \n rem (Film Name) to remove a film \n->")
+                              " yes to confirm \n rem (Film Name) to remove a film \n"
+                              "\x1B[3;31m Note! rem * removes all films \n"
+                              " \n->")
             match operation:
                 case "yes":
                     PayInterfaceInit(self.email, self.password, filmsList)
@@ -40,7 +42,15 @@ class CartControlInterface:
                     if "rem" in operation:
                         filmName = operation.split("rem ")
                         filmControl = FilmsControl(self.email, self.password)
-                        filmControl.removeFilmWithName(filmName[1], email=self.email)
+                        if filmName[1] == '*':
+                            for film in filmsList:
+                                filmControl.removeClientFilmWithName(film)
+                            from Interface.ClientInterface import ClientInterface
+                            os.system("cls")
+                            ClientInterface(self.email, self.password)
+                        else:
+                            filmControl.removeClientFilmWithName(filmName[1])
+                            CartControlInterface(self.email, self.password).controlUI()
 
                     else:
                         return False

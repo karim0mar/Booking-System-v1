@@ -51,7 +51,7 @@ def getEmail():
         return email
     else:
         print("Please enter a valid email")
-        getEmail()
+        return getEmail()
 
 
 def getEmailAndCheck():
@@ -61,25 +61,34 @@ def getEmailAndCheck():
             return email
         else:
             print("Email already exists. Please try again")
-            getEmail()
+            return getEmail()
     else:
         print("Please enter a valid email")
-        getEmail()
+        return getEmail()
 
 
 def getPassword():
     password = input("Enter your password: \n->")
     if len(password) > 15 or len(password) < 1:
         print("Please enter a valid password")
-        getPassword()
+        return getPassword()
     else:
         return password
 
 
 def getPhoneNumber():
-    phoneNumber = int(input("Enter your phone number: \n->"))
-    if len(str(phoneNumber)) > 10:
+    phoneNumber = input("Enter your phone number: \n->")
+    if 12 < len(phoneNumber) < 8:
         print("Please enter a valid phone number")
-        getPhoneNumber()
+        return getPhoneNumber()
     else:
         return phoneNumber
+
+
+def getBankNumber():
+    BankNumber = input("\033[0;35mEnter your bank account number: \n ->")
+    if 12 >= len(BankNumber) >= 8:
+        return BankNumber
+    else:
+        print("Please enter a valid bank account number")
+        return getBankNumber()

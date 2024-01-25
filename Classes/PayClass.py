@@ -21,7 +21,7 @@ class PayClass:
         try:
             bData = ReservationsData(self.email)
             bData.BookedTickets = []
-            FilmData = filmDataAfterChange(bData.getBookedTickets(), self.email)
+            FilmData = filmDataAfterChange(bData.getBookedTickets(), self.email, self.password)
             writeData("Reservations", FilmData)
             self.sendPaymentReport()
             return True

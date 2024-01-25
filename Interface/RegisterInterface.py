@@ -10,6 +10,11 @@ from Interface.ClientInterface import ClientInterface
 class RegisterInterface:
 
     def __init__(self):
+        self.email = None
+        self.password = None
+        self.registerStatues = False
+
+    def register(self):
         print("         Welcome to the register page ..         \n")
         firsName = getFName()
         lastName = getLName()
@@ -19,10 +24,12 @@ class RegisterInterface:
         fullName = firsName + " " + lastName
         if not checkEmailExisted(email):
             if registerEmail(email, password, fullName, phoneNumber):
-                print("Email registered successfully..")
+                print("Registered successfully..")
                 time.sleep(1)
                 os.system("cls")
-                ClientInterface(email, password)
+                self.registerStatues = True
+                self.email = email
+                self.password = password
         else:
             print("Email already registered.")
             time.sleep(0.5)

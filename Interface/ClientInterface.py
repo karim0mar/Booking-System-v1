@@ -55,6 +55,6 @@ class ClientInterface:
             self.reload()
 
     def reload(self):
-        time.sleep(0.6)
+        time.sleep(0.2)
         os.system("cls")
         ClientInterface(self.email, self.password)
