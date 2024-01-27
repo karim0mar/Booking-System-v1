@@ -20,12 +20,12 @@ def PayInterfaceInit(email, password, filmsList):
     os.system("cls")
     print(f"Welcome to Pay Page, your total price is {str(payOperation.getTotalPayment()) + ' ' + CURRENCY}\n\n")
     bankAccount = getBankNumber()
-    print("\n\n\nprogressing the payment. please wait...\n")
+    print(f"\n\n\nprogressing the payment on ({bankAccount}). please wait...\n")
     load()
     time.sleep(4)
     if payOperation.confirmPayment():
         print("\n\n\t\t Payment Successful. ")
-        time.sleep(1.5)
+        time.sleep(2.5)
         os.system("cls")
         from Interface.ClientInterface import ClientInterface
         ClientInterface(email, password)

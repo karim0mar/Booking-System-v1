@@ -1,10 +1,8 @@
 import os
 import time
-import main
 from Classes.AssistClass import *
 from Classes.ClientData import checkEmailExisted
 from Classes.RegisterClass import registerEmail
-from Interface.ClientInterface import ClientInterface
 
 
 class RegisterInterface:
@@ -33,4 +31,5 @@ class RegisterInterface:
         else:
             print("Email already registered.")
             time.sleep(0.5)
-            main.init()
+            import main
+            main.initialize()

@@ -78,7 +78,7 @@ def getPassword():
 
 def getPhoneNumber():
     phoneNumber = input("Enter your phone number: \n->")
-    if 12 < len(phoneNumber) < 8:
+    if 12 < len(phoneNumber) < 8 or not phoneNumber.isdecimal():
         print("Please enter a valid phone number")
         return getPhoneNumber()
     else:

@@ -9,9 +9,10 @@ def filmsPanel(email, password):
     print("2) Control films")
     print("0) Back")
     operation = int(input("\n->"))
+    os.system('cls')
     match operation:
         case 0:
-            AdminPageUI(email, password)
+            adminPageUI(email, password)
         case 1:
             filmName = input("Enter film name: \n->")
             filmTime = input("Enter film time in minutes: \n->")
@@ -30,7 +31,6 @@ def filmsPanel(email, password):
                 time.sleep(1)
                 filmsPanel(email, password)
         case 2:
-            os.system("cls")
             from Interface.AdminFilmControl import AdminFilmControlInterface
             AdminFilmControlInterface(email, password)
 
@@ -45,9 +45,10 @@ def clientPanel(email, password):
     print("2) Remove Client")
     print("0) Back")
     operation = int(input("\n->"))
+    os.system("cls")
     match operation:
         case 0:
-            AdminPageUI(email, password)
+            adminPageUI(email, password)
         case 1:
             from Interface.RegisterInterface import RegisterInterface
             registerData = RegisterInterface()
@@ -69,10 +70,10 @@ def transactions(email, password):
     match operation:
         case _:
             os.system("cls")
-            AdminPageUI(email, password)
+            adminPageUI(email, password)
 
 
-def AdminPageUI(email, password):
+def adminPageUI(email, password):
     adminData = AdminData(email, password)
     if not checkAdminEmailExisted(email, password):
         exit(1)
@@ -94,9 +95,9 @@ def AdminPageUI(email, password):
                 transactions(email, password)
             case 4:
                 import main
-                main.init()
+                main.initialize()
             case _:
                 print("Invalid Input")
-                AdminPageUI(email, password)
+                adminPageUI(email, password)
 
     pass

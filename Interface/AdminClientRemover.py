@@ -1,6 +1,7 @@
 import os
 import time
 
+from Classes.AssistClass import readData
 from Classes.ClientData import showClients, removeClientWithEmail, checkEmailExisted, ClientsNumber
 
 
@@ -19,20 +20,23 @@ def AdminClientRemover(email, password):
                 clientPanel(email, password)
             case _:
                 if "rem" in operation:
-                    clientEmail = operation.split("rem ")
-                    if clientEmail[1] == '*':
-                        pass
+                    clientEmail = operation.split("rem ")[1]
+                    if clientEmail == '*':
+                        clientsData = readData("Clients")["clients"]
+                        for client in clientsData:
+                            removeClientWithEmail(client["email"])
+
                     else:
-                        if checkEmailExisted(clientEmail[1]):
-                            if removeClientWithEmail(clientEmail[1]):
-                                print("Client " + clientEmail[1] + " removed")
+                        if checkEmailExisted(clientEmail):
+                            if removeClientWithEmail(clientEmail):
+                                print("Client " + clientEmail + " removed")
                             else:
                                 print("failed to remove")
                         else:
-                            print("Client " + clientEmail[1] + " does not exist")
-                        time.sleep(2)
-                        os.system("cls")
-                        AdminClientRemover(email, password)
+                            print("Client " + clientEmail + " does not exist")
+                    time.sleep(2)
+                    os.system("cls")
+                    AdminClientRemover(email, password)
     else:
         print("No clients in the system")
         time.sleep(2)

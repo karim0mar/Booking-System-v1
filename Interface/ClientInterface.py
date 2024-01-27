@@ -1,15 +1,10 @@
 import os
 import time
 
-import main
 from Classes.ClientData import ClientData
 from Classes.FilmsControl import FilmsControl
 from Classes.ReservationsData import ReservationsData
 from Interface.CartControlInterface import CartControlInterface
-
-
-def payPage():
-    pass
 
 
 class ClientInterface:
@@ -30,8 +25,6 @@ class ClientInterface:
         operation = int(input("\n->"))
         os.system("cls")
         match operation:
-            case 0:
-                payPage()
             case 1:
                 if bookingData.getBookedTicketsNumber() < 5:
                     self.filmsPage()
@@ -41,7 +34,8 @@ class ClientInterface:
             case 2:
                 self.controlPage()
             case 3:
-                main.init()
+                import main
+                main.initialize()
             case _:
                 print("Please Enter A Valid Option")
                 self.reload()

@@ -3,7 +3,7 @@ import time
 
 from Classes.AssistClass import getEmail, getPassword
 from Classes.LoginClass import LoginClass
-from Interface.AdminInterface import AdminPageUI
+from Interface.AdminInterface import adminPageUI
 
 
 def AdminLoginUI():
@@ -15,11 +15,11 @@ def AdminLoginUI():
         print("Login successful")
         time.sleep(0.6)
         os.system("cls")
-        AdminPageUI(email, password)
+        adminPageUI(email, password)
     else:
         print("Admin not found.")
         time.sleep(0.5)
         os.system("cls")
         import main
-        main.init()
+        main.initialize()
     pass
