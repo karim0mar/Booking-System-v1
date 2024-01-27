@@ -21,31 +21,32 @@ This segment is dedicated to users who utilize the application for booking ticke
 
    Upon opening the application or running `main.py`, users encounter the home screen. If it's their first time, they can register; otherwise, they can login with their credentials to proceed.
 
-   ![Home Screen](./media/home.jpg)
+   ![Home Screen](./media/home.png)
 
 2. **Register Screen**
 
    First-time users can register using their email ID and password on this screen.
 
-   ![Register Screen](./media/register.jpg)
+   ![Register Screen](./media/register.png)
 
 3. **Login Screen**
 
    Returning users can directly login using their credentials to initiate the booking process.
 
-   ![Login Screen](./media/login.jpg)
+   ![Login Screen](./media/login.png)
 
 4. **Now Showing Screen**
+   ![Login Screen](./media/client.png)
 
    Following the login/registration, users are presented with options like adding films to the cart, confirming or canceling bookings, and managing their film selections.
 
    - Adding films to the cart displays a list with film details such as Film Name, Description, Ticket Price, and Show Date.
 
-   ![Add Film](./media/add_film.jpg)
+   ![Add Film](./media/add_film.png)
 
    - Control options allow for removing film tickets from the cart and confirming client payments.
 
-   ![Control Film](./media/control_film.jpg)
+   ![Control Film](./media/control_film.png)
 
 ### Admin Side
 
