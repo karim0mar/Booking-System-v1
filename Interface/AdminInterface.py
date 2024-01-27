@@ -9,7 +9,7 @@ def filmsPanel(email, password):
     print("2) Control films")
     print("0) Back")
     operation = int(input("\n->"))
-    os.system('cls')
+    os.system("cls")
     match operation:
         case 0:
             adminPageUI(email, password)
@@ -24,11 +24,13 @@ def filmsPanel(email, password):
             from Classes.FilmsControl import addFilm
             if addFilm(email, filmName, filmDescription, filmPrice, filmShowDate):
                 print("\nFilm added successfully.")
+                os.system('cls')
                 time.sleep(1)
                 filmsPanel(email, password)
             else:
                 print("Film already existed. Please try again.")
                 time.sleep(1)
+                os.system('cls')
                 filmsPanel(email, password)
         case 2:
             from Interface.AdminFilmControl import AdminFilmControlInterface

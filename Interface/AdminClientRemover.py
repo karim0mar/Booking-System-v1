@@ -14,6 +14,7 @@ def AdminClientRemover(email, password):
                           " rem (Client Email) to remove a client \n"
                           "\x1B[3;31m Note! rem * removes all client \n"
                           " \n->")
+        os.system("cls")
         match operation:
             case "0":
                 from Interface.AdminInterface import clientPanel

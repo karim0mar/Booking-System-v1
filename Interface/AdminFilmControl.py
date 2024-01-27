@@ -13,9 +13,11 @@ def AdminFilmControlInterface(email, password):
         filmData.append(film["filmName"])
     printFilmsData(filmData)
     print("\x1b[48;2;255;0;0m Enter 0 to back")
-    operation = input("\033[0m\x1B[3;33m"
-                      " price (Film Name) to (New Price) \n rem (Film Name) to remove a film \n"
-                      "\x1B[3;31m Note! rem * removes all films \n"
+    operation = input("\033[0m\x1B[3;33m "
+                      "price (Film Name) to (New Price) \n "
+                      "rem (Film Name) to remove a film \n"
+                      "\x1B[3;31m "
+                      "Note! rem * removes all films \n"
                       " \n->")
     match operation:
         case "0":
