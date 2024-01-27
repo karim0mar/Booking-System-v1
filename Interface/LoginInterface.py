@@ -8,12 +8,14 @@ from Interface.ClientInterface import ClientInterface
 
 class LoginInterface:
     def __init__(self):
+        print("\n\x1B[1;31m       Welcome To Login Page  \n")
         self.email = getEmail()
         self.password = getPassword()
         login_process = LoginClass(self.email, self.password)
         if login_process.ClientLogin():
             print("Login successful")
             time.sleep(0.6)
+            input()
             self.clear_screen()
             ClientInterface(self.email, self.password)
         else:

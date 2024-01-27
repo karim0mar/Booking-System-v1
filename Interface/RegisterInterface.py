@@ -22,14 +22,14 @@ class RegisterInterface:
         fullName = firsName + " " + lastName
         if not checkEmailExisted(email):
             if registerEmail(email, password, fullName, phoneNumber):
-                print("Registered successfully..")
+                print("\nRegistered successfully..")
                 time.sleep(1)
                 os.system("cls")
                 self.registerStatues = True
                 self.email = email
                 self.password = password
         else:
-            print("Email already registered.")
+            print("\nEmail already registered.")
             time.sleep(0.5)
             import main
             main.initialize()

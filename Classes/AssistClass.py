@@ -21,7 +21,7 @@ def writeData(fileName, data):
 
 def getFName():
     fName = input("Enter your first name: \n->")
-    if len(fName) > 10 or len(fName) <= 1:
+    if len(fName) > 15 or len(fName) <= 1:
         print("Please enter a valid name")
         getFName()
     else:
@@ -30,7 +30,7 @@ def getFName():
 
 def getLName():
     lName = input("Enter your last name: \n->")
-    if len(lName) > 10 or len(lName) <= 1:
+    if len(lName) > 15 or len(lName) <= 1:
         print("Please enter a valid name")
         getLName()
     else:

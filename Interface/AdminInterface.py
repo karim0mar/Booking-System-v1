@@ -80,7 +80,7 @@ def adminPageUI(email, password):
     if not checkAdminEmailExisted(email, password):
         exit(1)
     else:
-        print(f"         Welcome to the admin control page {adminData.getName()} ..         \n")
+        print(f"\n\x1B[1;31m          Welcome to the admin control page {adminData.getName()}.\x1b[0m         \n")
 
         print("1) Films Panel")
         print("2) Client Panel")

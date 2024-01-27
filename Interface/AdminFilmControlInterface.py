@@ -21,6 +21,7 @@ def AdminFilmControlInterface(email, password):
                       " \n->")
     match operation:
         case "0":
+            os.system("cls")
             filmsPanel(email, password)
         case _:
 

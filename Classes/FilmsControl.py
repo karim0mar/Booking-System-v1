@@ -132,7 +132,7 @@ class FilmsControl:
                 f"Film Name : {filmName} \x1B[3;31m{Booked}\n"
                 f"\033[2;96mFilm Description : {getFilmDescription(filmName)}\n"
                 f"Ticket Price : {getFilmPrice(filmName)}$\n"
-                f"Film Date: {getFilmDate(filmName)}\n")
+                f"Show Date: {getFilmDate(filmName)}\n")
 
         print("\x1B[3;31m Enter 0 to back")
         operation = int(input("\033[2;96mBook film number : \n->"))
