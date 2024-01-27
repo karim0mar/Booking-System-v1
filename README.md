@@ -70,4 +70,4 @@ The project is implemented using Python, leveraging JSON for data management to 
 1. Navigate to the project folder on your system.
 2. Execute `Booking System.cmd` to run the application.
 
-- Karim Omar
+- By: Karim Omar
