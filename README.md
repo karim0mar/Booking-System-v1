@@ -36,6 +36,7 @@ This segment is dedicated to users who utilize the application for booking ticke
    ![Login Screen](./media/login.png)
 
 4. **Now Showing Screen**
+   ![Login Screen](./media/client.png)
 
    Following the login/registration, users are presented with options like adding films to the cart, confirming or canceling bookings, and managing their film selections.
 
