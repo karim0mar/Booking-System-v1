@@ -5,27 +5,5 @@
         "description": "Clients Data..",
         "private": true
     },
-    "clients": [
-        {
-            "email": "k@l.com",
-            "password": "112233",
-            "name": "k@ l@",
-            "phoneNumber": "111111111",
-            "accountType": "usr"
-        },
-        {
-            "email": "k@k.com",
-            "password": "123456",
-            "name": "k@k.com k@k.com",
-            "phoneNumber": "1111111111",
-            "accountType": "usr"
-        },
-        {
-            "email": "example@ex.com",
-            "password": "123456",
-            "name": "exName exPassword",
-            "phoneNumber": "01111111111",
-            "accountType": "usr"
-        }
-    ]
+    "clients": []
 }

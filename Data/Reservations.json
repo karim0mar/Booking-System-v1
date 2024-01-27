@@ -1,33 +1,3 @@
 {
-    "reservations": [
-        {
-            "CustomerName": "k@ l@",
-            "email": "k@l.com",
-            "BookedTickets": [],
-            "TotalPayment": 0.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "k@k.com k@k.com",
-            "email": "k@k.com",
-            "BookedTickets": [
-                "Mar3y El Breemo",
-                "Bogeyman"
-            ],
-            "TotalPayment": 60.0,
-            "BookingDate": null
-        },
-        {
-            "CustomerName": "exName exPassword",
-            "email": "example@ex.com",
-            "BookedTickets": [
-                "Mar3y El Breemo",
-                "Mr. Ex",
-                "Tag (I)",
-                "Bogeyman"
-            ],
-            "TotalPayment": 179.0,
-            "BookingDate": null
-        }
-    ]
+    "reservations": []
 }
