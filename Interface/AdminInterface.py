@@ -33,7 +33,7 @@ def filmsPanel(email, password):
                 os.system('cls')
                 filmsPanel(email, password)
         case 2:
-            from Interface.AdminFilmControl import AdminFilmControlInterface
+            from Interface.AdminFilmControlInterface import AdminFilmControlInterface
             AdminFilmControlInterface(email, password)
 
         case _:
@@ -59,7 +59,7 @@ def clientPanel(email, password):
                 time.sleep(1)
                 clientPanel(email, password)
         case 2:
-            from Interface.AdminClientRemover import AdminClientRemover
+            from Interface.AdminClientRemoverInterface import AdminClientRemover
             AdminClientRemover(email, password)
 
 
