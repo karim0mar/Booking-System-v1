@@ -36,6 +36,7 @@ This segment is dedicated to users who utilize the application for booking ticke
    ![Login Screen](./media/login.png)
 
 4. **Now Showing Screen**
+   
    ![Login Screen](./media/client.png)
 
    Following the login/registration, users are presented with options like adding films to the cart, confirming or canceling bookings, and managing their film selections.
@@ -53,11 +54,12 @@ This segment is dedicated to users who utilize the application for booking ticke
 This segment caters to the admin or theater owner/booking counter. Admin privileges include:
 
 - Managing film details (add, remove, edit prices)
+  
+  ![Admin Film Control](./media/admin_film_control.png)
+
 - Managing client bookings (add, remove, view booked sets)
 
-![Admin Film Control](./media/admin_film_control.png)
-
-![Admin Client Control](./media/admin_client_control.png)
+   ![Admin Client Control](./media/admin_client_control.png)
 
 ## Implementation Plan
 
